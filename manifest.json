@@ -1,0 +1,47 @@
+{
+    "manifest_version": 2,
+    "name": "Nomoogle",
+    "description": "This extension is a starting point to create a real Chrome extension",
+    "version": "0.0.1",
+
+    "icons": {
+        "16": "img/nomoogle.png",
+        "48": "img/nomoogle.png",
+        "128": "img/nomoogle.png"
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "nativeMessaging",
+        "<all_urls>" 
+      ],
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["js/jquery.js", "js/content.js"],
+        "css": ["css/content.css"],
+        "run_at": "document_end"
+    }],
+    "options_ui": {
+        "page": "options.html",
+        "browser_style": false
+    },
+
+    "browser_action": {
+        "default_icon": {
+            "19": "img/nomoogle.png",
+            "38": "img/nomoogle.png"
+        },
+        "default_title": "Nomoogle",
+        "default_popup": "index.html"
+    },
+    "background": {
+        "scripts": ["js/jquery.js", "js/background.js"]
+    },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "applications": {
+        "gecko": {
+          "id": "7lovesharma7@gmail.com",
+          "strict_min_version": "53.0"
+        }
+      }
+}
