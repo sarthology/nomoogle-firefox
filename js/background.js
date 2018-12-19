@@ -26,7 +26,7 @@ $.getJSON("../data/data.json").then(function (data) {
 function redirectCheck(product,tabId,sendResponse) {
     browser.storage.sync.get({
         redirectEnabled: false
-    }, function (items) {
+    }, function (items) {        
         if (items.redirectEnabled) {
             browser.tabs.update(tabId, {url: product.alternatives[0].url});
         } 
