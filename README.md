@@ -29,7 +29,7 @@
 3. With two special modes 
 
 <div align="center">
-    <img src="https://i.imgur.com/k3EGWe6.png">
+    <img src="https://i.imgur.com/ZkCTJE2.png">
 </div>
 
  
